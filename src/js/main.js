@@ -1,0 +1,32 @@
+import modals from './modules/modals';
+import sliders from './modules/slider';
+import showMoreStyles from './modules/showMore';
+import forms from './modules/forms';
+import mask from './modules/mask';
+import checkInp from './modules/checkInputes';
+import calc from './modules/calc';
+import filter from './modules/filter';
+import changeImg from './modules/changeImg';
+import occo from './modules/accordion';
+import burgerMenu from './modules/burger';
+import scrolling from './modules/scrolling';
+import drop from './modules/drop';
+
+window.addEventListener('DOMContentLoaded', function(){
+    let modalState = {};
+    modals();
+    sliders('.feedback-slider-item', '', '.main-prev-btn', '.main-next-btn');
+    sliders('.main-slider-item', 'vertical');
+    showMoreStyles('.button-styles', '#styles .row');
+    forms();
+    mask('[name="phone"]');
+    checkInp('[name="name"]');
+    checkInp('[name="message"]');
+    calc(modalState);
+    filter();
+    changeImg();
+    occo('.accordion-heading');
+    burgerMenu('.burger-menu', '.burger');
+    scrolling('.pageup');
+    drop();
+});
